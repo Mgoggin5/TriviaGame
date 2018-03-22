@@ -3,7 +3,7 @@ $(document).ready(function () {
     var correctCount = 0;
     var wrongCount = 0;
     var unansweredCount = 0;
-    var timeleft = 25;
+    var timeleft = 20;
     var intervalId;
 
     $("#mid-game-container").hide();
@@ -49,6 +49,9 @@ $(document).ready(function () {
 
     function reset() {
         clearInterval(intervalId)
+        if (timeleft === 0) {
+            $("#end-container").show();
+        }
     }
 
     function countDown() {
@@ -60,16 +63,13 @@ $(document).ready(function () {
             clearInterval(countDown);
             timeleft = 0;
             timeUp();
-            return;
+        
 
-            if (timeleft === 0) {
-
-                timeUp();
-    
                 $("#mid-game-container").hide();
                 $("#end-container").show();
-                
-            }
+
+                return;   
+            
         })
 
 
@@ -148,6 +148,8 @@ $(document).ready(function () {
         $("#wrong-answers").html(wrongCount);
         $("#unanswered").html(unansweredCount);
         $("#end-container").show();
+
+
 
         reset()
     }
