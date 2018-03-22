@@ -3,7 +3,7 @@ $(document).ready(function () {
     var correctCount = 0;
     var wrongCount = 0;
     var unansweredCount = 0;
-    var timeleft =14;
+    var timeleft = 14;
     var intervalId;
 
     $("#mid-game-container").hide();
@@ -52,23 +52,24 @@ $(document).ready(function () {
         timeleft--;
 
         $("#done-button").on("click", function () {
-
+            
             clearInterval(countDown);
             timeleft = 0;
-            console.log("#done-button")
+            timeUp();
             return;
 
+            if (timeleft === 0) {
 
-        });
+                timeUp();
+    
+                $("#mid-game-container").hide();
+                $("#end-container").show();
+                
+            }
+        })
 
-        if (timeleft === 0) {
 
-            timeUp();
-
-            $("#mid-game-container").hide();
-
-        }
-    }
+    };
 
     function timeUp() {
 
@@ -139,9 +140,9 @@ $(document).ready(function () {
             wrongCount++;
         }
 
-        $('#correct-answers').html(correctCount);
-        $('#wrong-answers').html(wrongCount);
-        $('#unanswered').html(unansweredCount);
+        $("#correct-answers").html(correctCount);
+        $("#wrong-answers").html(wrongCount);
+        $("#unanswered").html(unansweredCount);
         $("#end-container").show();
 
     }
