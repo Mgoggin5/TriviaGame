@@ -3,7 +3,7 @@ $(document).ready(function () {
     var correctCount = 0;
     var wrongCount = 0;
     var unansweredCount = 0;
-    var timeleft = 14;
+    var timeleft = 25;
     var intervalId;
 
     $("#mid-game-container").hide();
@@ -44,6 +44,10 @@ $(document).ready(function () {
     }
 
     function stop() {
+        clearInterval(intervalId)
+    }
+
+    function reset() {
         clearInterval(intervalId)
     }
 
@@ -145,6 +149,7 @@ $(document).ready(function () {
         $("#unanswered").html(unansweredCount);
         $("#end-container").show();
 
+        reset()
     }
 
 });
