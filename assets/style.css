@@ -5,6 +5,8 @@ body {
     background-position: center;
     background-size: 100% 100%;
 	text-align: center;
+	padding: 70px;
+	
 }
 
 .logo{
@@ -26,7 +28,10 @@ body {
 	border-style: solid;
 	border-color: white;
     border-radius: 15px;
-    background-color: rgb(40, 240, 240);
+	background-color: rgb(40, 240, 240);
+	border-width: 5px;
+	
+
 
 }
 
