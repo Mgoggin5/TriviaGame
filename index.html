@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+   
+</head>
+
+<body>
+
+    <div id="start-container">
+
+        <h1 class="logo">Game Night Trivia</h1>
+
+        <button id="start-button">Start</button>
+    </div>
+
+    <div id="mid-game-container">
+
+        <h1 id="timer-line">Time Remaining:
+            <span id="timer-number">30 Seconds</span>
+        </h1>
+
+        <h1>Who was the second President of the United States?</h1>
+        
+        <input type="radio" name="q1" value="George Washington">George Washington
+        <input type="radio" name="q1" value="John Adams">John Adams
+        <input type="radio" name="q1" value="Abe Lincoln">Abe Lincoln
+        <input type="radio" name="q1" value="Thomas Jefferson">Thomas Jefferson
+
+
+        <h1>2. What year did the Great Depression begin?</h1>
+        
+        <input type="radio" name="q2" value="1899">1899
+        <input type="radio" name="q2" value="1776">1776
+        <input type="radio" name="q2" value="1939">1939
+        <input type="radio" name="q2" value="1929">1929
+
+        <h1>3. What planet is closest to the sun?</h1>
+      
+        <input type="radio" name="q3" value="Mercury">Mercury
+        <input type="radio" name="q3" value="Mars">Mars
+        <input type="radio" name="q3" value="Earth">Earth
+        <input type="radio" name="q3" value="Saturn">Saturn
+
+        <h1>4. How many NFL teams are there?</h1>
+       
+        <input type="radio" name="q4" value="28">28
+        <input type="radio" name="q4" value="42">42
+        <input type="radio" name="q4" value="32">32
+        <input type="radio" name="q4" value="34">34
+
+        <h1>5. What holiday is on February 14th?</h1>
+        
+        <input type="radio" name="q5" value="Christmas">Christmas
+        <input type="radio" name="q5" value="Thanksgiving">Thanksgiving
+        <input type="radio" name="q5" value="Valentines Day">Valentines Day
+        <input type="radio" name="q5" value="Easter">Easter
+
+        <h1>6. How many furlongs are in 1 mile??</h1>
+       
+        <input type="radio" name="q6" value="8">8
+        <input type="radio" name="q6" value="9">9
+        <input type="radio" name="q6" value="7">7
+        <input type="radio" name="q6" value="4">4
+
+        <br><br><br>
+
+        <button id="done-button">Done!</button>
+
+    </div>
+    <br><br>
+
+    <div id="end-container">
+
+        <h1 class="logo">Results!</h1>
+
+        <h1 id="done">All Done!</h1>
+        
+        <h1>Correct Answers:
+            <span id="correct-answers">0</span>
+        </h1>
+        <h1>Incorrect Answers:
+            <span id="wrong-answers">0</span>
+        </h1>
+        <h1>Unanswered:
+            <span id="Unanswered">0</span>
+        </h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" alt=""></script>
+    <script src="assets/javascript.js"></script>
+
+</body>
+
+</html>
